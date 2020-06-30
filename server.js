@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const colors = require('colors');
+const connectedDB = require('./config/db');
 
 // ---------------------------
 dotenv.config({
@@ -17,7 +18,8 @@ const app = express();
 
 
 
-
+// data base connection
+connectedDB();
 
 // creat route
 // every routes starts with /api
