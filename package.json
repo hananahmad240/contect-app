@@ -5,13 +5,17 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"dev": "nodemon server.js"
+		"server": "nodemon server.js",
+		"client": "npm start --prefix clinet",
+		"dev": "concurrently \" npm run server\" \"npm run client\""
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@hapi/joi": "^17.1.1",
 		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
 		"colors": "^1.4.0",
 		"config": "^3.3.1",
 		"dotenv": "^8.2.0",
